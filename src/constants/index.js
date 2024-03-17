@@ -58,6 +58,5 @@ export const banner = [
 // about content
 export const aboutData = {
   image: aboutImg,
-  content:
-    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam amet ipsa ipsam fugit fuga veritatis distinctio quam, esse rationevel expedita sequi quos eos eius cupiditate excepturi! Error,  accusantium eligendi.",
+  content: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam amet ipsa ipsam fugit fuga veritatis distinctio quam, esse rationevel expedita sequi quos eos eius cupiditate excepturi! Error,  accusantium eligendi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dicta sed veniam, voluptatem quas reiciendis soluta sequi iste. Id esse aspernatur voluptate voluptas sint animi sunt quod odio, facere optio.`,
 };

@@ -1,0 +1,45 @@
+.about {
+  background-color: #f8f6f4;
+  margin-top: -70px;
+  padding-top: 110px;
+  padding-bottom: 110px;
+  display: flex;
+  flex-direction: column;
+}
+.about .about_heading {
+  background: rgb(248, 246, 244);
+  background: linear-gradient(90deg, rgb(248, 246, 244) 0%, rgb(223, 223, 223) 50%, rgb(224, 178, 178) 100%);
+  padding: 1em 0em 1em 4em;
+  display: flex;
+  justify-content: flex-start;
+}
+.about .about_heading h1 {
+  font-size: 5em;
+  text-transform: uppercase;
+  font-weight: 600;
+  background-image: linear-gradient(to right, #ff6b6b, #556270);
+  -webkit-background-clip: text; /* For Safari */
+  background-clip: text;
+  color: transparent;
+}
+.about .about_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e3f4f4;
+  padding: 2em 0 2em 0;
+}
+.about .about_content div {
+  width: 50%;
+}
+.about .about_content .aboutImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about .about_content .aboutImg img {
+  width: 80%;
+}
+.about .about_content .about_caption {
+  font-size: 2em;
+}/*# sourceMappingURL=about.css.map */

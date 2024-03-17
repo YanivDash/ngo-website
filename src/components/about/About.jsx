@@ -1,20 +1,33 @@
 import React from "react";
-import { aboutImg } from "../../assets";
+import { aboutData } from "../../constants";
+import "../../styles/about/about.css";
+import { motion } from "framer-motion";
+import { fadeIn, slideIn, zoomIn } from "../../utils/motion";
 const About = () => {
   return (
     <div className="about">
-      <h1 className="about_heading"></h1>
+      <div className="about_heading">
+        <motion.h1
+          initial="hidden"
+          whileInView={"show"}
+          variants={fadeIn("right", "tween", 0.5, 0.5)}
+          viewport={{ once: true }}
+        >
+          About Us
+        </motion.h1>
+      </div>
       <div className="about_content">
-        <div className="aboutImg">
-          <img src={aboutImg} alt="about_img" />
-        </div>
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          variants={zoomIn(0.1, 0.5)}
+          className="aboutImg"
+          viewport={{ once: true }}
+        >
+          <img src={aboutData.image} alt="about_img" />
+        </motion.div>
         <div className="about_caption">
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam
-            amet ipsa ipsam fugit fuga veritatis distinctio quam, esse ratione
-            vel expedita sequi quos eos eius cupiditate excepturi! Error,
-            accusantium eligendi.
-          </p>
+          <p>{aboutData.content}</p>
         </div>
       </div>
     </div>
