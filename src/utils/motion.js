@@ -65,6 +65,7 @@ export const slideIn = (direction, type, delay, duration) => {
     show: {
       x: 0,
       y: 0,
+
       transition: {
         type: type,
         delay: delay,
