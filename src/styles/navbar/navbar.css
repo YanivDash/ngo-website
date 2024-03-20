@@ -20,7 +20,7 @@
   gap: 3em;
 }
 .navbar .subheader .subheader_social a {
-  font-size: 2.5em;
+  font-size: 3em;
   color: rgba(255, 255, 255, 0.8);
 }
 .navbar .subheader .subheader_social a:hover {
@@ -34,33 +34,43 @@
   gap: 2.5em;
 }
 .navbar .subheader .subheader_contact a {
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
   color: #efecec;
-  font-size: 1.5em;
+  font-size: 2em;
 }
 .navbar .subheader .subheader_contact a span {
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  justify-content: center;
   align-items: center;
   color: white;
-  font-weight: 600;
+  font-size: 1.5em;
 }
 .navbar .subheader .subheader_contact a:hover {
   color: blue;
 }
 @media (max-width: 699px) {
   .navbar .subheader {
-    flex-direction: column;
-    padding-bottom: 1em;
+    justify-content: space-around;
+    flex-direction: row-reverse;
   }
   .navbar .subheader .subheader_social {
-    font-size: 1.1em;
+    font-size: 0.9em;
     padding-left: 0;
   }
   .navbar .subheader .subheader_contact {
-    font-size: 1.2em;
+    font-size: 0.9em;
     font-weight: 600;
     justify-content: space-between;
     margin-right: 0;
   }
-  .navbar .subheader .subheader_contact span {
+  .navbar .subheader .subheader_contact .subheader_number {
     display: none;
   }
 }

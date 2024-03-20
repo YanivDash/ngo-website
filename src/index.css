@@ -1,7 +1,9 @@
-@import url("https://fonts.googleapis.com");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 /* Your CSS styles here */
-
+* {
+  scroll-behavior: smooth;
+}
 a {
   font-weight: 500;
   text-decoration: inherit;
@@ -16,7 +18,8 @@ body {
   max-width: 100%;
   min-height: 100vh;
   font-size: 10px;
-  font-family: monospace;
+  font-family: "Poppins", sans-serif;
+
   /* transition: all 0.5s ease-in-out; */
   font-family: "Inter Tight", sans-serif;
 }

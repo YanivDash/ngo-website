@@ -1,0 +1,200 @@
+.courses {
+  display: flex;
+  flex-direction: column;
+  background-color: #0f172a;
+  padding: 2em 5em 3em 5em;
+  color: white;
+
+  .courses_heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      text-transform: uppercase;
+      font-size: 5em;
+      font-weight: 800;
+      color: white;
+    }
+  }
+  .courses_content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+
+    gap: 2vw;
+
+    .courses_cotnent_inside {
+      background-color: rgb(31 41 55);
+      width: 35vw;
+      padding: 2em;
+      border-radius: 1.5em;
+      .courses_content_image {
+        position: relative;
+        width: 100%;
+        img {
+          width: 100%;
+          border-radius: 1.5em;
+          transition: all 0.5s ease;
+          border: 3px white solid;
+          filter: brightness(100%);
+          &:hover {
+            filter: brightness(60%);
+            cursor: pointer;
+          }
+        }
+        .readMore {
+          position: absolute;
+          display: block;
+          z-index: 2;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          transition: all 0.5s;
+          font-size: 2vw;
+          font-weight: 600;
+          background-color: rgba($color: #000000, $alpha: 0.5);
+          border-radius: 10px;
+          color: white;
+          padding: 0.3em 0.5em 0.3em 0.5em;
+          text-transform: uppercase;
+        }
+        .readNone {
+          display: none;
+        }
+      }
+      .courses_content_caption {
+        transition: all 1s ease;
+        min-height: 30em;
+        h2 {
+          font-size: 2em;
+          font-weight: 600;
+        }
+        .courses_overview {
+          h3 {
+            font-size: 1.8em;
+            color: rgb(209 213 219);
+          }
+          p {
+            font-size: 1.5em;
+            line-height: 20px;
+            letter-spacing: 1.5px;
+          }
+          button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+            padding: 0.5em 0.8em 0.5em 0.8em;
+            font-size: 1.8em;
+            font-weight: 600;
+            background-color: rgb(75 85 99);
+            border: 0;
+            color: rgba($color: white, $alpha: 0.6);
+            transition: all 0.5s ease-in-out;
+
+            &:hover {
+              border-radius: 10px;
+              background-color: gold;
+              color: rgba($color: black, $alpha: 1);
+            }
+            &:active {
+              scale: 0.8;
+            }
+          }
+        }
+      }
+    }
+  }
+  .courses_table {
+    margin-top: 3em;
+    overflow: hidden;
+    border-radius: 10px;
+    .GeneratedTable {
+      width: 100%;
+      background-color: #ffffff;
+      border-collapse: collapse;
+
+      color: #000000;
+    }
+
+    td,
+    th {
+      border-width: 2px;
+      width: 33.333333%;
+      border-color: #0f172a;
+      border-style: solid;
+      padding: 1.1em;
+      line-height: 1em;
+      font-size: 1.6vw;
+    }
+
+    thead {
+      font-size: 1vw;
+      background-color: #ffcc00;
+      color: black;
+      font-weight: 600;
+    }
+    p {
+      border: 2px solid rgb(134, 134, 134);
+      padding: 1.1em;
+      font-size: 2.5em;
+      background-color: rgb(51 65 85);
+
+      span {
+        display: flex;
+        align-items: center;
+        gap: 1.5m;
+        .courses_amount {
+          margin-left: 0.5em;
+          color: greenyellow;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 699px) {
+  .courses {
+    padding: 2em;
+    .courses_heading {
+      h1 {
+        margin-left: -20px;
+        font-size: 3em;
+        text-transform: uppercase;
+      }
+    }
+    .courses_content {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 4em;
+
+      .courses_cotnent_inside {
+        width: 100%;
+        padding: 1em;
+        .courses_content_image {
+          .readMore {
+            font-size: 3vw;
+          }
+        }
+      }
+    }
+    .courses_table {
+      p {
+        font-size: 1.4em;
+      }
+      .GeneratedTable {
+        td,
+        th {
+          font-size: 3vw;
+        }
+        th {
+          font-size: 3.5vw;
+        }
+      }
+      p {
+        font-size: 1.2em;
+      }
+    }
+  }
+}

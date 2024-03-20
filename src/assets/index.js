@@ -7,6 +7,8 @@ import banner5 from "./banner5.jpg";
 import aboutImg from "./about.png";
 import rajmri from "./rajmricenter.png";
 import university from "./university.png";
+import mltImg from "./mltImg.jpg";
+import radiologyImg from "./radiologyImg.jpg";
 export {
   logo,
   banner1,
@@ -17,4 +19,6 @@ export {
   aboutImg,
   rajmri,
   university,
+  mltImg,
+  radiologyImg,
 };

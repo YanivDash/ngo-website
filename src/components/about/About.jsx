@@ -6,10 +6,11 @@ import { fadeIn, slideIn, zoomIn } from "../../utils/motion";
 import { rajmri } from "../../assets";
 import { useState } from "react";
 import { FaStar } from "react-icons/fa";
+
 const About = () => {
   let [read, setRead] = useState(false);
   return (
-    <div className="about">
+    <div id="about" className="about">
       {aboutData.map((item, index) => {
         let moreContent;
         if (item.subContent.length > 500) {

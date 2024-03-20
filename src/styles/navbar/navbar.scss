@@ -22,7 +22,7 @@
       padding-left: 3em;
       gap: 3em;
       a {
-        font-size: 2.5em;
+        font-size: 3em;
         color: rgba($color: $subheader-text-color, $alpha: 0.8);
         &:hover {
           color: rgba($color: $subheader-text-color, $alpha: 1);
@@ -36,13 +36,21 @@
       margin-right: 3em;
       gap: 2.5em;
       a {
+        display: flex;
+        width: fit-content;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
         span {
+          display: flex;
+          width: fit-content;
+          justify-content: center;
           align-items: center;
           color: $subheader-text-color;
-          font-weight: 600;
+          font-size: 1.5em;
         }
         color: #efecec;
-        font-size: 1.5em;
+        font-size: 2em;
         &:hover {
           color: blue;
         }
@@ -51,18 +59,18 @@
   }
   @media (max-width: 699px) {
     .subheader {
-      flex-direction: column;
-      padding-bottom: 1em;
+      justify-content: space-around;
+      flex-direction: row-reverse;
       .subheader_social {
-        font-size: 1.1em;
+        font-size: 0.9em;
         padding-left: 0;
       }
       .subheader_contact {
-        font-size: 1.2em;
+        font-size: 0.9em;
         font-weight: 600;
         justify-content: space-between;
         margin-right: 0;
-        span {
+        .subheader_number {
           display: none;
         }
       }

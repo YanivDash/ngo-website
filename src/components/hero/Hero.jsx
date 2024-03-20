@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { banner } from "../../constants";
 import { motion } from "framer-motion";
+import Loader from "../loader/Loader";
 import "../../styles/hero/hero.css";
 import { fadeIn, slideIn } from "../../utils/motion";
 const Hero = () => {
   const [active, setActive] = useState(0);
-  const [secondActive, setSecondActive] = useState(1);
+
   const totalBanner = banner.length - 1;
 
   const autoSlide = () => {

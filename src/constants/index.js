@@ -4,26 +4,21 @@ import {
   banner3,
   banner4,
   aboutImg,
-  rajmri,
   university,
+  mltImg,
+  radiologyImg,
 } from "../assets";
-import { AiFillInstagram } from "react-icons/ai";
-import { FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
+
+import { FaFacebook } from "react-icons/fa";
+import { IoMdContact } from "react-icons/io";
+import { MdEmail } from "react-icons/md";
+import { IoLocation } from "react-icons/io5";
 
 // subheader
 export const social = [
-  { icon: AiFillInstagram, link: "/" },
   {
     icon: FaFacebook,
-    link: "/",
-  },
-  {
-    icon: FaTwitter,
-    link: "/",
-  },
-  {
-    icon: FaYoutube,
-    link: "/",
+    link: "https://www.facebook.com/people/Friends-Indeed-Foundation/100086909890597/?mibextid=LQQJ4d",
   },
 ];
 
@@ -31,11 +26,11 @@ export const social = [
 export const links = [
   {
     name: "About",
-    link: "/about",
+    link: "about",
   },
   {
-    name: "knowledge",
-    link: "knowledge",
+    name: "Courses",
+    link: "courses",
   },
 ];
 
@@ -68,7 +63,9 @@ export const aboutData = [
   {
     image: aboutImg,
     title: "About us",
-    content: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam amet ipsa ipsam fugit fuga veritatis distinctio quam, esse rationevel expedita sequi quos eos eius cupiditate excepturi! Error,  accusantium eligendi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dicta sed veniam, voluptatem quas reiciendis soluta sequi iste. Id esse aspernatur voluptate voluptas sint animi sunt quod odio, facere optio.`,
+    content: `Friends Indeed Foundation was established in April, 2022 with the aim of creating a better tomorrow for our community. Our team comprises passionate individuals who believe in the power of change. 
+    Our mission is to provide support, education, and resources to those in need, fostering an environment where every individual can thrive. From local initiatives to global outreach, we are committed to making a positive impact, one act of kindness at a time.
+    Join us in our journey to create a world where friendship and aid know no boundaries. Together, we can build a future filled with hope and opportunity for all.`,
     subContent: "",
   },
   {
@@ -101,19 +98,12 @@ export const aboutData = [
   },
 ];
 
+// Courses
 export const courses = [
   {
-    title: "Medical Laboratory Technology (MLT)",
-    overview: `The Medical Laboratory Technology (MLT) program is designed to provide general education, natural
-    science and medical laboratory science education courses necessary for entry-level professional
-    preparation. Medical Laboratory Technicians perform laboratory tests used to diagnose, treat and
-    monitor patients.`,
-    carrer: `Phlebotomist >> Lab Coordinator >> Assistant in Hospital Labs >> Research & Development >> Medical
-    Writing >> Lab-in-Charge >> Area head of Labs
-    Entrepreneurship by opening their own lab or taking franchise`,
-  },
-  {
     title: "Radiology & Medical Imaging Technology (RMIT)",
+    image: radiologyImg,
+    id: 1,
     overview: [
       `Radiography is the science of producing medical images using x-radiation. Radiology uses medical
     imaging to diagnose, treat, and monitor various diseases. Medical imaging includes x-rays, ultrasound,
@@ -125,5 +115,42 @@ export const courses = [
     ],
     carrer: `Jr.RMI Technologist >> RMI Technologist >> Sr. RMI Technologist >> RMIT Technical officer >> RMIT
     Senior Technical officer >> RMIT CTO >> Chief Manager/ RMIT Head / Director - RMIT`,
+  },
+  {
+    title: "Medical Laboratory Technology (MLT)",
+    image: mltImg,
+    id: 2,
+    overview: [
+      `The Medical Laboratory Technology (MLT) program is designed to provide general education, natural
+    science and medical laboratory science education courses necessary for entry-level professional
+    preparation. Medical Laboratory Technicians perform laboratory tests used to diagnose, treat and
+    monitor patients.`,
+    ],
+    carrer: `Phlebotomist >> Lab Coordinator >> Assistant in Hospital Labs >> Research & Development >> Medical
+    Writing >> Lab-in-Charge >> Area head of Labs
+    Entrepreneurship by opening their own lab or taking franchise`,
+  },
+];
+
+// contact
+
+export const contact = [
+  {
+    title: "NUmber",
+    icon: IoMdContact,
+    data: "+919625887710",
+    type: "tel:+919625887710",
+  },
+  {
+    title: "Email",
+    icon: MdEmail,
+    data: "info@friendsindeed.co.in",
+    type: "mailto:info@friendsindeed.co.in",
+  },
+  {
+    title: "Adress",
+    icon: IoLocation,
+    data: "h0011 sector-8 faridabad",
+    type: "text",
   },
 ];

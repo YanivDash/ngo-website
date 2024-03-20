@@ -4,9 +4,11 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import "../../styles/navbar/navbar.css";
 import { social, links } from "../../constants";
+import { MdEmail } from "react-icons/md";
+import { IoMdContact } from "react-icons/io";
 
 // importing icons
-import { IoMdContact } from "react-icons/io";
+
 import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = () => {
@@ -34,12 +36,18 @@ const Navbar = () => {
           })}
         </ul>
         <div className="subheader_contact">
-          <a href="tel:+1234567890">
+          <a className="subheader_number" href="tel:+919625887710">
             {" "}
-            <span>Call Us:</span> +1 (234) 567-890
+            <span>
+              <IoMdContact />:
+            </span>{" "}
+            +91 96258 87710
           </a>
-          <a href="mailto:example@example.com">
-            <span>Email Us:</span> example@example.com
+          <a href="mailto:info@friendsindeed.co.in">
+            <span>
+              <MdEmail />:
+            </span>{" "}
+            info@friendsindeed.co.in
           </a>
         </div>
       </div>
@@ -55,14 +63,14 @@ const Navbar = () => {
         <div className="navbar_links">
           <ul>
             {links.map((item, index) => (
-              <Link key={index} to={item.link}>
+              <a key={index} href={`#${item.link}`}>
                 <li>{item.name}</li>
-              </Link>
+              </a>
             ))}
           </ul>
         </div>
         <div className="navbar_contact">
-          <Link to="contact">
+          <a href="#contact">
             <button className="pointer">
               <IoMdContact
                 style={{ fontSize: "30px" }}
@@ -70,7 +78,7 @@ const Navbar = () => {
               />
               contact
             </button>
-          </Link>
+          </a>
         </div>
         <GiHamburgerMenu
           onClick={() => setMenu(!menu)}
@@ -85,21 +93,21 @@ const Navbar = () => {
       >
         <div className="navbar_mobile_links">
           {links.map((item, index) => (
-            <Link key={index} to={item.link}>
-              <li>{item.name}</li>
-            </Link>
+            <a key={index} href={`#${item.link}`}>
+              <li onClick={() => setMenu(false)}>{item.name}</li>
+            </a>
           ))}
         </div>
         <div className="navbar_mobile_contact">
-          <Link to="contact">
-            <button className="pointer">
+          <a href="#contact">
+            <button onClick={() => setMenu(false)} className="pointer">
               <IoMdContact
                 style={{ fontSize: "30px" }}
                 className="navbar_icon"
               />
               contact
             </button>
-          </Link>
+          </a>
         </div>
       </div>
     </nav>
