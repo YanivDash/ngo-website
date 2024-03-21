@@ -6,6 +6,8 @@ import {
   About,
   Loader,
   Courses,
+  Contact,
+  Footer,
 } from "./components";
 import { motion } from "framer-motion";
 
@@ -32,6 +34,8 @@ function App() {
           <BottomBadge />
           <About />
           <Courses />
+          <Contact />
+          <Footer />
         </>
       )}
     </motion.div>

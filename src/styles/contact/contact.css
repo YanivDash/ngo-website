@@ -1,0 +1,121 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-items: center;
+  padding-bottom: 10em;
+}
+.contact .contact_heading {
+  background-color: #f4e8e8;
+  width: 100%;
+  text-align: center;
+  padding: 5em 0 5em 0;
+  margin-bottom: 1em;
+  box-shadow: 0 0.1px 1px black;
+}
+.contact .contact_heading h1 {
+  font-size: 5em;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 0;
+}
+.contact .contact_heading p {
+  margin: 0;
+  margin-top: 0.5em;
+  font-size: 1.5em;
+}
+.contact .contact_info {
+  padding: 1em 0em 1em 0em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 1em;
+}
+.contact .contact_info .contact_card {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: black;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  padding: 1em;
+  transition: all 0.5s;
+  min-height: 200px;
+}
+.contact .contact_info .contact_card:hover {
+  transform: translateY(-10px);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.contact .contact_info .contact_card .contact_icon,
+.contact .contact_info .contact_card h2,
+.contact .contact_info .contact_card p {
+  margin: 0;
+}
+.contact .contact_info .contact_card .contact_icon {
+  font-size: 5em;
+  color: #ff8911;
+  padding: 0.1em;
+}
+.contact .contact_info .contact_card .contact_icon:hover {
+  color: #ff6200;
+}
+.contact .contact_info .contact_card h2 {
+  font-size: 2em;
+  padding: 0.5em;
+}
+.contact .contact_info .contact_card p {
+  padding: 1em;
+  font-size: 1.5em;
+  text-align: center;
+  font-weight: 600;
+}
+.contact .contact_facebook {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  width: 80vw;
+  margin: auto;
+  border-radius: 1em;
+}
+.contact .contact_facebook h1 {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: 4em;
+  text-transform: uppercase;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+
+@media (max-width: 699px) {
+  .contact .contact_heading {
+    font-size: 0.8em;
+  }
+  .contact .contact_info {
+    gap: 1.5em;
+    flex-direction: column;
+  }
+  .contact .contact_info .contact_card {
+    width: 65%;
+  }
+  .contact .contact_facebook {
+    width: 90vw;
+    height: 150px;
+    border: 1px black solid;
+  }
+  .contact .contact_facebook h1 {
+    font-size: 2em;
+  }
+}/*# sourceMappingURL=contact.css.map */

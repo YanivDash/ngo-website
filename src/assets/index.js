@@ -1,4 +1,5 @@
 import logo from "./logo.png";
+import logo2 from "./logo2.png";
 import banner1 from "./banner1.jpg";
 import banner2 from "./banner2.jpg";
 import banner3 from "./banner3.jpg";
@@ -9,8 +10,11 @@ import rajmri from "./rajmricenter.png";
 import university from "./university.png";
 import mltImg from "./mltImg.jpg";
 import radiologyImg from "./radiologyImg.jpg";
+import facebook from "./facebook.png";
+import footerImg from "./footer.jpg";
 export {
   logo,
+  logo2,
   banner1,
   banner2,
   banner3,
@@ -21,4 +25,6 @@ export {
   university,
   mltImg,
   radiologyImg,
+  facebook,
+  footerImg,
 };

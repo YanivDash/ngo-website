@@ -136,21 +136,21 @@ export const courses = [
 
 export const contact = [
   {
-    title: "NUmber",
+    title: "Number",
     icon: IoMdContact,
-    data: "+919625887710",
+    data: "phone: +919625887710",
     type: "tel:+919625887710",
   },
   {
     title: "Email",
     icon: MdEmail,
-    data: "info@friendsindeed.co.in",
+    data: "mail at: info@friendsindeed.co.in",
     type: "mailto:info@friendsindeed.co.in",
   },
   {
     title: "Adress",
     icon: IoLocation,
     data: "h0011 sector-8 faridabad",
-    type: "text",
+    type: "#",
   },
 ];

@@ -1,0 +1,93 @@
+.flex-container, .footer .footer_content .footer_ngo,
+.footer .footer_content .footer_icon,
+.footer .footer_content .footer_contact {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.footer p {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+.footer .footer_content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  background-color: #333333;
+  justify-content: space-between;
+  padding: 3em 4em 3em 4em;
+  flex-wrap: wrap;
+}
+.footer .footer_content .footer_ngo,
+.footer .footer_content .footer_icon,
+.footer .footer_content .footer_contact {
+  padding: 0 1em 0 1em;
+  width: 25%;
+}
+.footer .footer_content .footer_ngo {
+  margin-top: 2em;
+}
+.footer .footer_content .footer_ngo img {
+  width: 15em;
+  margin: 0;
+}
+.footer .footer_content .footer_ngo h1 {
+  font-size: 3em;
+  color: #ff8911;
+}
+.footer .footer_content .footer_contact h1 {
+  font-size: 3em;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.9);
+}
+.footer .footer_content .footer_contact p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.5em;
+  font-weight: 600;
+}
+.footer .footer_content .footer_contact p:hover {
+  color: white;
+}
+.footer .footer_content .footer_icon {
+  margin-top: 2em;
+}
+.footer .footer_content .footer_icon a {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 5em;
+}
+.footer .footer_content .footer_icon a:hover {
+  color: white;
+}
+.footer .footer_content .footer_donate {
+  color: rgba(255, 255, 255, 0.7);
+}
+.footer .footer_content .footer_donate h1 {
+  font-size: 3em;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.9);
+}
+.footer .footer_content .footer_donate p {
+  font-size: 1.5em;
+}
+.footer .footer_content .footer_donate p:hover {
+  color: white;
+}
+.footer .footer_copyright p {
+  font-size: 1em;
+  text-align: center;
+  padding: 1em 0 1em 0;
+}
+
+@media (max-width: 699px) {
+  .footer .footer_content {
+    flex-direction: column;
+  }
+  .footer .footer_content .footer_ngo,
+  .footer .footer_content .footer_icon,
+  .footer .footer_content .footer_contact {
+    padding: 0 1em 0 1em;
+    width: 100%;
+  }
+}/*# sourceMappingURL=footer.css.map */
