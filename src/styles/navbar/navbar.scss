@@ -4,6 +4,8 @@
   $subheader-text-color: white;
   $navbar-text-color: black;
   width: 100%;
+  position: relative;
+  z-index: 5;
 
   // navbar subheader styles
   .subheader {
@@ -224,9 +226,20 @@
       }
     }
   }
+
   @media (min-width: 699px) {
     .navbar_mobile {
       display: none;
+    }
+    .navbar_sticky {
+      transition: all ease-in-out 0.4s;
+      padding: 10px 0 10px 0;
+      width: 100%;
+      position: fixed;
+      top: 0;
+    }
+    .navbar_absolute {
+      transition: all ease-in-out 0.4s;
     }
   }
   .menuActive {

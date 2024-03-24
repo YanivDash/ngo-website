@@ -2,18 +2,32 @@ import React from "react";
 import { contact } from "../../constants";
 import "../../styles/contact/contact.css";
 import { facebook } from "../../assets";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../utils/motion";
+import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+import { LuHeartHandshake } from "react-icons/lu";
 
 const ContactCard = (item) => {
   const data = item.data;
   const Icon = data.icon;
   return (
-    <div className="contact_card">
+    <motion.div
+      initial="hidden"
+      whileInView="show"
+      variants={fadeIn("down", "", data.key * 0.3, 0.1)}
+      viewport={{ once: true }}
+      className="contact_card"
+      style={{
+        position: "relative",
+        zIndex: 2 - data.key,
+      }}
+    >
       <a href={data.type}>
         <Icon className="contact_icon" />
       </a>
       <h2>{data.title}</h2>
       <p>{data.data}</p>
-    </div>
+    </motion.div>
   );
 };
 
@@ -21,14 +35,24 @@ const Contact = () => {
   return (
     <div id="contact" className="contact">
       <div className="contact_heading">
-        <h1>Contact Us</h1>
-        <p>"Friends Indeed Foundation"</p>
+        <LuHeartHandshake
+          style={{
+            color: "red",
+            fontSize: "20px",
+          }}
+        />
+        <h1> Contact Us</h1>
+        <p>
+          {" "}
+          <FaQuoteLeft /> Friends Indeed Foundation <FaQuoteRight />
+        </p>
       </div>
       <div className="contact_info">
         {" "}
-        {contact.map((item, index) => (
-          <ContactCard key={index} data={item} />
-        ))}
+        {contact.map((item, index) => {
+          item.key = index;
+          return <ContactCard key={index} data={item} />;
+        })}
       </div>
       <a
         className="subheader_social_links"

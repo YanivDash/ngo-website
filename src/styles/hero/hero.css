@@ -35,22 +35,34 @@
 .hero .hero_img .hero_caption .hero_caption_header {
   background-color: rgba(0, 0, 0, 0.5);
   border: 5px solid white;
+  border-radius: 5px;
   display: flex;
   align-items: center;
   overflow-y: hidden;
 }
-.hero .hero_img .hero_caption h1,
-.hero .hero_img .hero_caption h2 {
-  text-transform: uppercase;
-}
 .hero .hero_img .hero_caption h1 {
-  font-size: 4.5em;
+  font-size: 2vw;
   padding: 0 1em 0 1em;
+  -webkit-text-stroke: 0.1px white;
+  text-transform: capitalize;
   color: #fda403;
 }
 .hero .hero_img .hero_caption h2 {
-  font-size: 2em;
-  text-decoration: underline;
+  -webkit-text-stroke: 0.15px black;
+  font-size: 1.3vw;
+  font-weight: 700;
+}
+@media (max-width: 699px) {
+  .hero .hero_img .hero_caption .hero_caption_header {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid white;
+  }
+  .hero .hero_img .hero_caption h1 {
+    font-size: 3.5em;
+  }
+  .hero .hero_img .hero_caption h2 {
+    font-size: 2em;
+  }
 }
 .hero .hero_hide {
   display: none;

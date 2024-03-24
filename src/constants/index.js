@@ -7,6 +7,8 @@ import {
   university,
   mltImg,
   radiologyImg,
+  hosptialImg,
+  heathCareimg,
 } from "../assets";
 
 import { FaFacebook } from "react-icons/fa";
@@ -38,23 +40,26 @@ export const links = [
 export const banner = [
   {
     image: banner1,
-    title: "Heading One",
-    subTitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: "Karke dekho accha lagega",
+    subTitle: `Our journey is
+    not just about providing meals or shelter; it’s about touching lives,
+    igniting hope, and fostering resilience`,
   },
   {
     image: banner2,
-    title: "Heading Two",
-    subTitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: "Every act of kindness we extend",
+    subTitle: `whether it’s a warm meal for a hungry child, a comforting word to a grieving soul, or a helping hand to an elderly neighbor—creates ripples of positive change`,
   },
+
   {
     image: banner3,
-    title: "Heading Three",
-    subTitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: "Three Pillars of Our foundation",
+    subTitle: `Empathy, Collaboration, Sustainability`,
   },
   {
     image: banner4,
-    title: "Heading Four",
-    subTitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: "",
+    subTitle: "",
   },
 ];
 
@@ -69,7 +74,7 @@ export const aboutData = [
     subContent: "",
   },
   {
-    image: "",
+    image: heathCareimg,
     title: "FIF Health Care",
     content: `India’s healthcare industry comprises hospitals, medical devices and equipment, health insurance, clinical trials, telemedicine and medical tourism. The most emerging health category coming as Allied & Other Healthcare Professionals. The Paramedical and other allied healthcare professionals are vital in our journey to health and wellbeing along with the Doctors and eventual treatment.`,
     subContent: [
@@ -92,6 +97,15 @@ export const aboutData = [
     image: university,
     title: "why us",
     content: `FIF Healthcare center will trained the students by giving full practical exposure and degree by renowned university. We pre-dominantly focus on building the skills and working for the welfare of the society. Our training is specifically designed for these areas of awareness, development and global growth. We believe that a skilled person will have the ability to face any situation with courage, grace, logic and dignity. `,
+    subContent: "",
+  },
+  {
+    image: hosptialImg,
+    title: "Raj Nursing Home",
+    content: `Raj Nursing Home is one of the leading hospital established in year 2017 with 30 beds in
+    Faridabad. The best healthcare professionals provide Comprehensive healthcare. It is located
+    at Sector 3. It provides advanced levels of care in over different specialties including
+    Gynaecologist, Orthopedics, General Physician. `,
     subContent: [
       `The mix of Academic and Technical excellence will enhance the student confidence, make them self-reliable, Independent and to outcome as skilled work force to contributes towards society and family need.`,
     ],

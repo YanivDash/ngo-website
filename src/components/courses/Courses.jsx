@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { courses } from "../../constants";
 import "../../styles/courses/courses.css";
 import { FaStar } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { animate, motion } from "framer-motion";
 import { fadeIn } from "../../utils/motion";
 import { FaIndianRupeeSign } from "react-icons/fa6";
 import { PiStudentFill } from "react-icons/pi";
@@ -23,6 +23,7 @@ const CourseCard = (item) => {
         onMouseEnter={() => setReadMore(true)}
         onMouseLeave={() => setReadMore(false)}
         onClick={() => setMoreContent(!moreContent)}
+        style={{ position: "relative", zIndex: "2" }}
       >
         <a href={`#courses_index${data.id}`}>
           <h1
@@ -36,12 +37,24 @@ const CourseCard = (item) => {
         <img src={data.image} alt="" />
       </div>
       <div id={`courses_index${data.id}`} className="courses_content_caption">
-        <h2>{data.title}</h2>
+        <motion.h2
+          initial="hidden"
+          whileInView="show"
+          variants={fadeIn("down", "tween", 0.2, 0.5)}
+          viewport={{ once: true }}
+        >
+          {data.title}
+        </motion.h2>
         <div className="courses_overview">
           <h3>Overview</h3>
-          <p>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1.5 }}
+            viewport={{ once: true }}
+          >
             <FaStar /> {data.overview[0]}
-          </p>
+          </motion.p>
           {moreContent ? (
             <>
               {data.overview[1] ? (

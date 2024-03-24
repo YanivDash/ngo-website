@@ -14,6 +14,13 @@ import { GiHamburgerMenu } from "react-icons/gi";
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
 
+  window.addEventListener("scroll", () => {
+    var navbar = document.querySelector(".navbar_desktop");
+
+    navbar.classList.toggle("navbar_sticky", window.scrollY > 50);
+    navbar.classList.toggle("navbar_absolute", window.scrollY < 50);
+  });
+
   return (
     <nav className="navbar">
       {/* subheader social and email and number  */}
@@ -39,13 +46,13 @@ const Navbar = () => {
           <a className="subheader_number" href="tel:+919625887710">
             {" "}
             <span>
-              <IoMdContact />:
-            </span>{" "}
+              <IoMdContact />{" "}
+            </span>
             +91 96258 87710
           </a>
           <a href="mailto:info@friendsindeed.co.in">
             <span>
-              <MdEmail />:
+              <MdEmail />
             </span>{" "}
             info@friendsindeed.co.in
           </a>
@@ -55,10 +62,10 @@ const Navbar = () => {
       {/* navbar desktop  */}
       <div className="navbar_desktop">
         <div className="navbar_logo">
-          <Link to="/">
-            <img src={logo} alt="logo" />
-          </Link>
-          <h2 className="pointer">Friends Indeed Foundation</h2>
+          <img src={logo} alt="logo" />
+          <a href="#">
+            <h2 className="pointer">Friends Indeed Foundation</h2>
+          </a>
         </div>
         <div className="navbar_links">
           <ul>

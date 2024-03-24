@@ -16,6 +16,16 @@ const About = () => {
         if (item.subContent.length > 500) {
           moreContent = item.subContent.slice(500, item.subContent.length - 1);
         }
+        let fadeImg = "";
+        let fadeText = "";
+
+        if (index % 2 == 0) {
+          fadeImg = "right";
+          fadeText = "left";
+        } else {
+          fadeImg = "left";
+          fadeText = "right";
+        }
 
         return (
           <div key={index}>
@@ -29,12 +39,18 @@ const About = () => {
                 {item.title}
               </motion.h1>
             </div>
-            <div className="about_content">
+            <div
+              className={
+                index % 2 == 0
+                  ? "about_content"
+                  : "about_content about_content_reverse"
+              }
+            >
               {item.image ? (
                 <motion.div
                   initial="hidden"
                   whileInView="show"
-                  variants={fadeIn("right", "tween", 0.3, 0.5)}
+                  variants={fadeIn(fadeImg, "tween", 0.3, 0.5)}
                   className="aboutImg"
                   viewport={{ once: true }}
                 >
@@ -47,7 +63,7 @@ const About = () => {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: "true" }}
-                variants={fadeIn("left", "tween", 0.3, 0.5)}
+                variants={fadeIn(fadeText, "tween", 0.3, 0.5)}
                 style={
                   item.image
                     ? {}
@@ -104,9 +120,6 @@ const About = () => {
           </div>
         );
       })}
-      <div className="rajmri">
-        <img src={rajmri} alt="" />
-      </div>
     </div>
   );
 };

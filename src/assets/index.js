@@ -12,6 +12,8 @@ import mltImg from "./mltImg.jpg";
 import radiologyImg from "./radiologyImg.jpg";
 import facebook from "./facebook.png";
 import footerImg from "./footer.jpg";
+import hosptialImg from "./hospital.jpg";
+import heathCareimg from "./fyiealthCareimg.jpg";
 export {
   logo,
   logo2,
@@ -27,4 +29,6 @@ export {
   radiologyImg,
   facebook,
   footerImg,
+  hosptialImg,
+  heathCareimg,
 };

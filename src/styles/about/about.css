@@ -2,7 +2,7 @@
   background-color: #f8f6f4;
   margin-top: -70px;
   padding-top: 110px;
-  padding-bottom: 110px;
+  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
 }
@@ -45,6 +45,7 @@
   justify-content: center;
 }
 .about .about_content .aboutImg img {
+  border-radius: 10px;
   width: 80%;
 }
 .about .about_content .about_caption {
@@ -58,7 +59,13 @@
   word-spacing: 5px;
   letter-spacing: 1.5px;
 }
+.about .about_content_reverse {
+  flex-direction: row-reverse;
+}
 @media (max-width: 699px) {
+  .about .about_heading {
+    padding: 0 0 0 20px;
+  }
   .about .about_content {
     flex-direction: column;
   }
@@ -74,6 +81,7 @@
     justify-content: center;
   }
   .about .about_content .aboutImg img {
+    border-radius: 10px;
     width: 100%;
   }
 }
@@ -83,13 +91,4 @@
   letter-spacing: 1.5px;
   display: flex;
   flex-direction: column;
-}
-.about .rajmri {
-  display: flex;
-  align-items: center;
-  padding: 1em;
-}
-.about .rajmri img {
-  margin: auto;
-  width: 80%;
 }/*# sourceMappingURL=about.css.map */

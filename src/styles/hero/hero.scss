@@ -17,7 +17,6 @@
     position: relative;
     .hero_caption {
       animation: blured 3s ease-in;
-
       position: absolute;
       top: 50%;
       left: 50%;
@@ -32,22 +31,35 @@
       .hero_caption_header {
         background-color: rgba($color: #000000, $alpha: 0.5);
         border: 5px solid white;
+        border-radius: 5px;
         display: flex;
         align-items: center;
         overflow-y: hidden;
       }
-      h1,
-      h2 {
-        text-transform: uppercase;
-      }
+
       h1 {
-        font-size: 4.5em;
+        font-size: 2vw;
         padding: 0 1em 0 1em;
+        -webkit-text-stroke: 0.1px white;
+        text-transform: capitalize;
         color: #fda403;
       }
       h2 {
-        font-size: 2em;
-        text-decoration: underline;
+        -webkit-text-stroke: 0.15px black;
+        font-size: 1.3vw;
+        font-weight: 700;
+      }
+      @media (max-width: 699px) {
+        .hero_caption_header {
+          background-color: rgba($color: #000000, $alpha: 0.5);
+          border: 2px solid white;
+        }
+        h1 {
+          font-size: 3.5em;
+        }
+        h2 {
+          font-size: 2em;
+        }
       }
     }
   }
